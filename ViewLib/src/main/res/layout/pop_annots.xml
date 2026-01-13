@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/actual_content"
+        android:layout_alignTop="@+id/actual_content"
+        android:layout_alignRight="@+id/actual_content"
+        android:layout_alignBottom="@+id/actual_content"
+        android:background="@drawable/bg_menu"/>
+
+    <LinearLayout
+        android:id="@+id/actual_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:id="@+id/view_ink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_ink"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_annot_ink" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:text="Ink" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_line"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_annot_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:text="Line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_rect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_rect"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_annot_rect" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:text="Rectangle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_oval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_oval"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_annot_ellipse" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:text="Ellipse" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_note"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_annot_note" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:text="Text Note" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_editbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_edit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_annot_editbox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:text="Editbox" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_stamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_stamp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_annot_stamp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:text="Stamp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_polygon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_polygon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_annot_polygon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:text="Polygon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_polyline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_polyline"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_annot_polyline" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:text="Polyline" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
