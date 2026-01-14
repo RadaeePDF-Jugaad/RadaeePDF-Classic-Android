@@ -20,13 +20,28 @@ RadaeePDF SDK is designed to solve most developers' needs with regards to PDF re
 - **Multiple View Modes** - Single page, continuous scroll, and more
 - **Night Mode** - Built-in dark mode support for better readability
 
+## Quick Start - Run Demo
+
+To quickly test the RadaeePDF SDK demo:
+
+1. Open Android Studio
+2. Click on **Clone Repository** (or File → New → Project from Version Control)
+3. Paste the repository URL:
+   ```
+   https://github.com/RadaeePDF-Jugaad/RadaeePDF-Classic-Android.git
+   ```
+4. Click **Clone** and wait for the project to open
+5. Open the `RDPDFReader` folder in the project structure (if needed)
+6. Click the Play/Run button (▶) to run the demo in an emulator or connected device
 ## Installation
 
 ### Manual Installation
 
-1. Download the RadaeePDF SDK library from Git Repository
-2. Add the project ViewLab to your project
-3. Update your `build.gradle` to include the library
+. Download the RadaeePDF SDK library from Git Repository
+   ```
+   https://github.com/RadaeePDF-Jugaad/RadaeePDF-Classic-Android.git
+   ```
+2. Add the project ViewLib to your project
 
 ```gradle
 dependencies {
