@@ -37,7 +37,7 @@ To quickly test the RadaeePDF SDK demo:
 
 ### Manual Installation
 
-. Download the RadaeePDF SDK library from Git Repository
+1. Download the RadaeePDF SDK library from Git Repository
    ```
    https://github.com/RadaeePDF-Jugaad/RadaeePDF-Classic-Android.git
    ```
