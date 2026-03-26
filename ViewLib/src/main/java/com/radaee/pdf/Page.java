@@ -16,6 +16,10 @@ class for PDF Page.
 */
 public class Page
 {
+	static public abstract class AnnotCallback
+	{
+		public abstract long OnAnnotRendering(long hand);
+	}
 	static public class Annotation
 	{
 		protected long hand;
@@ -343,7 +347,7 @@ public class Page
 		}
 		public Annotation GetReply(int idx)
 		{
-			long rhand = Page.getAnnotReply(page.hand, hand, false, idx);
+			long rhand = Page.getAnnotReply(page.hand, hand, idx);
 			return new Annotation(page, rhand);
 		}
         /**
@@ -1527,10 +1531,12 @@ public class Page
 
     static private native float[] getCropBox( long hand );
 	static private native float[] getMediaBox( long hand );
+	static private native float[] getBox(int type,  long hand);
 	static private native float[] getContentBox( long hand );
 	static private native void close( long hand );
 	static private native void renderPrepare( long hand, long dib );
 	static private native boolean render( long hand, long dib, long matrix, int quality );
+	static private native boolean render1( long hand, long dib, long matrix, int quality, AnnotCallback callback );
 	static private native boolean renderToBmp( long hand, Bitmap bitmap, long matrix, int quality );
 	static private native boolean renderToGray(long hand, Bitmap bitmap, long matrix, int quality);
 	static private native boolean renderToBuf( long hand, int[] data, int w, int h, long matrix, int quality);
@@ -1581,7 +1587,7 @@ public class Page
     static private native boolean getAnnotPopupOpen(long page, long annot);
     static private native boolean setAnnotPopupOpen(long page, long annot, boolean open);
 	static private native int getAnnotReplyCount(long page, long annot);
-	static private native long getAnnotReply(long page, long annot, boolean open, int idx);
+	static private native long getAnnotReply(long page, long annot, int idx);
 	static private native boolean setAnnotName( long hand, long annot, String name);
 	static private native int getAnnotFieldType( long hand, long annot );
     static private native int getAnnotFieldFlag( long hand, long annot );
@@ -1772,6 +1778,15 @@ public class Page
 	{
 		return getMediaBox( hand );
 	}
+	/**
+	 * get rotated Box, this method need an any type of license.
+	 * @param type 0: crop box, 1: media box, 2: bleed box, 3: trim box, 4: art box.
+	 * @return float array as [left, top, right, bottom] in PDF coordinate.
+	 */
+	final public float[] GetBox(int type)
+	{
+		return getBox(type, hand);
+	}
 
 	/**
 	 * get content box of page.
@@ -1863,6 +1878,21 @@ public class Page
         if(dib == null || mat == null) return  false;
         try {
             return render(hand, dib.hand, mat.hand, Global.g_render_quality);
+			/*
+			return render1(hand, dib.hand, mat.hand, Global.g_render_quality, new AnnotCallback() {
+				@Override
+				public long OnAnnotRendering(long hval) {
+					int type = getAnnotType(Page.this.hand, hval);
+					if (type == 2) return 0x100000000L;//do not display link annoataion
+					if (type == 20)
+					{
+						int sta = getAnnotCheckStatus(Page.this.hand, hval);
+						if (sta <= 0) return 0;//fully transparency.
+					}
+					return 0x200000ff;//blue transparency.
+				}
+			});
+			 */
         }
         catch (Exception e)
         {

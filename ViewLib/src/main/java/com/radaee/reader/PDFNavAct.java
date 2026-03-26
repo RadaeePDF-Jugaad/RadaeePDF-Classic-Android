@@ -10,12 +10,10 @@ import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -142,14 +140,6 @@ public class PDFNavAct extends Activity implements OnItemClickListener {
     {
         LinearLayout layout = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.dlg_pswd, null);
         final EditText tpassword = (EditText) layout.findViewById(R.id.txt_password);
-        CheckBox showPassCB = layout.findViewById(R.id.chk_show);
-        showPassCB.setOnCheckedChangeListener((which, checked)->{
-            if(checked){
-                tpassword.setTransformationMethod(null);
-            } else {
-                tpassword.setTransformationMethod(new PasswordTransformationMethod());
-            }
-        });
         final PDFGridItem gitem = item;
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

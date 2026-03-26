@@ -11,11 +11,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -81,15 +79,6 @@ public class PDFMainAct extends Activity {
         {
             LinearLayout layout = (LinearLayout) LayoutInflater.from(PDFMainAct.this).inflate(R.layout.dlg_pswd, null);
             final EditText tpassword = (EditText) layout.findViewById(R.id.txt_password);
-
-            CheckBox showPassCB = layout.findViewById(R.id.chk_show);
-            showPassCB.setOnCheckedChangeListener((which, checked)->{
-                if(checked){
-                    tpassword.setTransformationMethod(null);
-                } else {
-                    tpassword.setTransformationMethod(new PasswordTransformationMethod());
-                }
-            });
 
             AlertDialog.Builder builder = new AlertDialog.Builder(PDFMainAct.this);
             builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
@@ -176,14 +165,6 @@ public class PDFMainAct extends Activity {
         {
             LinearLayout layout = (LinearLayout) LayoutInflater.from(PDFMainAct.this).inflate(R.layout.dlg_pswd, null);
             final EditText tpassword = (EditText) layout.findViewById(R.id.txt_password);
-            CheckBox showPassCB = layout.findViewById(R.id.chk_show);
-            showPassCB.setOnCheckedChangeListener((which, checked)->{
-                if(checked){
-                    tpassword.setTransformationMethod(null);
-                } else {
-                    tpassword.setTransformationMethod(new PasswordTransformationMethod());
-                }
-            });
 
             AlertDialog.Builder builder = new AlertDialog.Builder(PDFMainAct.this);
             builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
@@ -271,14 +252,6 @@ public class PDFMainAct extends Activity {
         {
             LinearLayout layout = (LinearLayout) LayoutInflater.from(PDFMainAct.this).inflate(R.layout.dlg_pswd, null);
             final EditText tpassword = (EditText) layout.findViewById(R.id.txt_password);
-            CheckBox showPassCB = layout.findViewById(R.id.chk_show);
-            showPassCB.setOnCheckedChangeListener((which, checked)->{
-                if(checked){
-                    tpassword.setTransformationMethod(null);
-                } else {
-                    tpassword.setTransformationMethod(new PasswordTransformationMethod());
-                }
-            });
 
             AlertDialog.Builder builder = new AlertDialog.Builder(PDFMainAct.this);
             builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {

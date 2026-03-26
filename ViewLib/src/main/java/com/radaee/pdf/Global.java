@@ -32,7 +32,7 @@ public class Global
 
 	//binding to app ID "com.radaee.reader", can avtive version before "20241219".
 	//the version string can be retrieved by Global.getVersion().
-	public static String mSerial = "787C0A1F178329A65007B62F2A8C2CC8128123275F69F444E768B369628DF6E6A5F93058CE87D3FCA4052B815890AAA1";
+	public static String mSerial = "EAF277864564C5D2DC65AFA2B241774DFF865D07845BC08AC7A6D85A1D41639EC086EC8F15B7E08FAC9C220B62CF17CA";
 
 	/**
 	 * get version string from library.
