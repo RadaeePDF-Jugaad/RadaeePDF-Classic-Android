@@ -22,7 +22,7 @@ import java.io.InputStreamReader;
  * class for Global setting.
  * 
  * @author RadaeePDF.com
- * @version 3.66.2
+ * @version 3.66.3
  */
 public class Global
 {
