@@ -455,7 +455,7 @@ public class PDFViewDual extends PDFView
             if (m_pages == null || m_lock == 3) return false;
             int ivx = (int) (-velocityX * Global.fling_dis / 2);
             int ivy = (int) (-velocityY * Global.fling_dis / 2);
-            int minX = 0, maxX = m_docw - m_w, minY = 0, maxY = m_doch - m_h;
+            int minX = 0, maxX = m_docw - m_w, minY = 0, maxY = (int) (m_doch - m_h);
 
             int index = m_pageno;
             if (Global.g_view_mode == 6 && m_w > m_h && (m_horz_dual != null && m_horz_dual[m_pageno]))
@@ -476,7 +476,7 @@ public class PDFViewDual extends PDFView
 		int y = m_scroller.getCurrY();
 		if( x + m_w > m_docw ) x = m_docw - m_w;
 		if( x < 0 ) x = 0;
-		if( y + m_h > m_doch ) y = m_doch - m_h;
+		if( y + m_h > m_doch ) y = (int) (m_doch - m_h);
 		if( y < 0 ) y = 0;
 		int ccur = 0;
 		while( ccur < m_cells.length )
