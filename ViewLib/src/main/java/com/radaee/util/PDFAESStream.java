@@ -103,7 +103,7 @@ public class PDFAESStream implements PDFStream
 			//m_enc_cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
 			//m_enc_cipher.init(Cipher.ENCRYPT_MODE, skey, iv);
 			//m_dec_cipher = Cipher.getInstance("AES/GCM/PKCS5PADDING");
-			//m_dec_cipher.init(Cipher.ENCRYPT_MODE, skey, params);
+			//m_dec_cipher.init(Cipher.ENCRYPT_MODE, skey, iv);
 		}
 		catch(Exception e)
 		{
