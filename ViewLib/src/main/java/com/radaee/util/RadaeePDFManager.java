@@ -28,7 +28,7 @@ public class RadaeePDFManager implements RadaeePluginCallback.PDFReaderListener 
     private int mIconsBgColor = -1;
     private int mTitleBgColor = -1;
 
-    private int mLayoutType = CPU_BASED_LAYOUT;
+    private int mLayoutType = GPU_BASED_LAYOUT;
     public static final int GPU_BASED_LAYOUT = 0;
     public static final int CPU_BASED_LAYOUT = 1;
 
