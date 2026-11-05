@@ -4,6 +4,16 @@
 
 RadaeePDF SDK is a powerful, native PDF rendering and manipulation library for Android applications. Built from true native C++ code, it provides exceptional performance and a comprehensive set of features for working with PDF documents.
 
+> [!IMPORTANT]
+> **Notice — November 2026: unused font file removed from ViewLib**
+>
+> The file `ViewLib/src/main/res/raw/arial_black` was included in this repository by mistake, copied from our internal render-conformance test pipeline. The SDK code (Java framework and native library) never invokes, instantiates or loads this font, and it is never used to render any text.
+>
+> The file has been removed from the repository (see commit [`07c3014`](https://github.com/RadaeePDF-Jugaad/RadaeePDF-Classic-Android/commit/07c3014)). If your project includes ViewLib from this repository, please delete `res/raw/arial_black` from your copy as well and rebuild your app. Removing it has no effect on the SDK's functionality.
+>
+> For any question, please open a ticket at [support.radaeepdf.com](https://support.radaeepdf.com).
+
+
 ## About RadaeePDF
 
 RadaeePDF SDK is designed to solve most developers' needs with regards to PDF rendering and manipulation. The SDK is trusted across industries worldwide including automotive, banking, publishing, healthcare, and more.
